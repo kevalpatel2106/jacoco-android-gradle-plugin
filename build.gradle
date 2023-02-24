@@ -33,16 +33,6 @@ dependencies {
   testImplementation 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.8.0'
 }
 
-scmVersion {
-  tag {
-    prefix = 'jacoco-android-release-'
-  }
-  versionCreator "versionWithBranch"
-}
-
-group = 'com.dicedmelon.gradle'
-version = scmVersion.version
-
 test {
   testLogging {
     exceptionFormat "full"
@@ -61,15 +51,8 @@ task sourcesJar(type: Jar) {
   from sourceSets.main.allSource
 }
 
-publishing {
-  publications {
-    plugin(MavenPublication) {
-      from components.java
-
-      artifact sourcesJar
-    }
-  }
-}
+group = 'com.kevalpatel2106.gradle'
+version = '0.1.0'
 
 gradlePlugin {
   plugins {
@@ -78,7 +61,7 @@ gradlePlugin {
       displayName = 'Fork of a plugin com.dicedmelon.gradle.jacoco-android for simplifying JacocoReport configuration for Android projects'
       description =
           'A Gradle plugin that adds fully configured JacocoReport tasks for unit tests of each Android application and library project variant.'
-      implementationClass = 'com.dicedmelon.gradle.jacoco.android.JacocoAndroidPlugin'
+      implementationClass = 'com.kevalpatel2106.gradle.jacoco.android.JacocoAndroidPlugin'
     }
   }
 }
