@@ -1,4 +1,4 @@
-package com.dicedmelon.gradle.jacoco.android
+package com.kevalpatel2106.gradle.jacoco.android
 
 import org.gradle.api.Project
 import org.gradle.api.internal.file.collections.DirectoryFileTree
@@ -8,8 +8,8 @@ import org.gradle.testing.jacoco.tasks.JacocoReport
 import spock.lang.Specification
 import spock.lang.Unroll
 
-import static com.dicedmelon.gradle.jacoco.android.AndroidProjectFactory.configureAsLibraryAndApplyPlugin
-import static com.dicedmelon.gradle.jacoco.android.AndroidProjectFactory.create
+import static AndroidProjectFactory.configureAsLibraryAndApplyPlugin
+import static AndroidProjectFactory.create
 
 class JacocoAndroidPluginSpec extends Specification {
 
