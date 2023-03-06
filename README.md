@@ -1,5 +1,5 @@
 # jacoco-android-gradle-plugin
-[![Gradle Plugin Portal](https://img.shields.io/maven-metadata/v/https/plugins.gradle.org/m2/com.kevalpatel2106.gradle/jacoco-android/maven-metadata.xml.svg?label=Gradle%20Plugin%20Portal)](https://plugins.gradle.org/plugin/com.kevalpatel2106.gradle.jacoco-android)
+[![Gradle Plugin Portal](https://img.shields.io/maven-metadata/v/https/plugins.gradle.org/m2/io.github.kevalpatel2106.gradle/jacoco-android/maven-metadata.xml.svg?label=Gradle%20Plugin%20Portal)](https://plugins.gradle.org/plugin/com.kevalpatel2106.gradle.jacoco-android)
 
 ## This is the fork of [jacoco-android-gradle-plugin by arturdm](https://github.com/arturdm/jacoco-android-gradle-plugin)
 
@@ -19,12 +19,12 @@ buildscript {
   }
   dependencies {
     ...
-    classpath 'com.kevalpatel2106.gradle:jacoco-android:0.1.5'
+    classpath 'io.github.kevalpatel2106.gradle:jacoco-android:0.1.5'
   }
 }
 
 apply plugin: 'com.android.application'
-apply plugin: 'com.kevalpatel2106.gradle.jacoco-android'
+apply plugin: 'io.github.kevalpatel2106.gradle.jacoco-android'
 
 jacoco {
   toolVersion = "0.8.4"

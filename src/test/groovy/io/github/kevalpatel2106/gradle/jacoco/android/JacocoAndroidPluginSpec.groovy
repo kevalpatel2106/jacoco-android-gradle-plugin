@@ -1,4 +1,4 @@
-package com.kevalpatel2106.gradle.jacoco.android
+package io.github.kevalpatel2106.gradle.jacoco.android
 
 import org.gradle.api.Project
 import org.gradle.api.internal.file.collections.DirectoryFileTree

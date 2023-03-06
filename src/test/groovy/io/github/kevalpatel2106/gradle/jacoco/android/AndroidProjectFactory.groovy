@@ -1,4 +1,4 @@
-package com.kevalpatel2106.gradle.jacoco.android
+package io.github.kevalpatel2106.gradle.jacoco.android
 
 import org.apache.commons.io.FileUtils
 import org.gradle.api.Project
