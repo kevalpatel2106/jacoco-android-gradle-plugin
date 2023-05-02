@@ -85,20 +85,20 @@ class JacocoAndroidPlugin implements Plugin<ProjectInternal> {
     reportTask.reports {
       def destination = project.jacocoAndroidUnitTestReport.destination
 
-      csv.required project.jacocoAndroidUnitTestReport.csv.enabled
-      html.required project.jacocoAndroidUnitTestReport.html.enabled
-      xml.required project.jacocoAndroidUnitTestReport.xml.enabled
+      csv.required = project.jacocoAndroidUnitTestReport.csv.enabled
+      html.required = project.jacocoAndroidUnitTestReport.html.enabled
+      xml.required = project.jacocoAndroidUnitTestReport.xml.enabled
 
       if (csv.enabled) {
-        csv.outputLocation new File((destination == null) ? "${project.buildDir}/jacoco/jacoco.csv" : "${destination.trim()}/jacoco.csv")
+        csv.outputLocation = new File((destination == null) ? "${project.buildDir}/jacoco/jacoco.csv" : "${destination.trim()}/jacoco.csv")
       }
 
       if (html.enabled) {
-        html.outputLocation new File((destination == null) ? "${project.buildDir}/jacoco/jacocoHtml" : "${destination.trim()}/jacocoHtml")
+        html.outputLocation = new File((destination == null) ? "${project.buildDir}/jacoco/jacocoHtml" : "${destination.trim()}/jacocoHtml")
       }
 
       if (xml.enabled) {
-        xml.outputLocation new File((destination == null) ? "${project.buildDir}/jacoco/jacoco.xml" : "${destination.trim()}/jacoco.xml")
+        xml.outputLocation = new File((destination == null) ? "${project.buildDir}/jacoco/jacoco.xml" : "${destination.trim()}/jacoco.xml")
       }
     }
     reportTask
@@ -132,9 +132,9 @@ class JacocoAndroidPlugin implements Plugin<ProjectInternal> {
     logger.info("Added $reportTask")
     logger.info("  executionData: $reportTask.executionData.asPath")
     logger.info("  sourceDirectories: $reportTask.sourceDirectories.asPath")
-    logger.info("  csv.destination: $reportTask.reports.csv.destination")
-    logger.info("  xml.destination: $reportTask.reports.xml.destination")
-    logger.info("  html.destination: $reportTask.reports.html.destination")
+    logger.info("  csv.destination: $reportTask.reports.csv.outputLocation")
+    logger.info("  xml.destination: $reportTask.reports.xml.outputLocation")
+    logger.info("  html.destination: $reportTask.reports.html.outputLocation")
 
   }
 }
