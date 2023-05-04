@@ -89,15 +89,15 @@ class JacocoAndroidPlugin implements Plugin<ProjectInternal> {
       html.required = project.jacocoAndroidUnitTestReport.html.enabled
       xml.required = project.jacocoAndroidUnitTestReport.xml.enabled
 
-      if (csv.enabled) {
+      if (csv.required) {
         csv.outputLocation = new File((destination == null) ? "${project.buildDir}/jacoco/jacoco.csv" : "${destination.trim()}/jacoco.csv")
       }
 
-      if (html.enabled) {
+      if (html.required) {
         html.outputLocation = new File((destination == null) ? "${project.buildDir}/jacoco/jacocoHtml" : "${destination.trim()}/jacocoHtml")
       }
 
-      if (xml.enabled) {
+      if (xml.required) {
         xml.outputLocation = new File((destination == null) ? "${project.buildDir}/jacoco/jacoco.xml" : "${destination.trim()}/jacoco.xml")
       }
     }
